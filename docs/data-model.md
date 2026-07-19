@@ -1,6 +1,6 @@
 Account (Customer)
 │
-├── Booking**c
+├── Booking__c
 │ ├── Hotel_Name**c (Text)
 │ ├── Check_In**c (Date)
 │ ├── Check_Out**c (Date)
