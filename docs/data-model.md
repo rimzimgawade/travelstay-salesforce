@@ -13,7 +13,7 @@ Account (Customer)
 ├── Payment**c
 │ ├── Booking**c (Lookup)
 │ ├── Amount**c (Currency)
-│ ├── Stripe_Payment_Intent_Id**c (Text, External Id)
+│ ├── Stripe_Payment_Intent_Id\_\_c (Text, External Id)
 │ ├── Status**c (Picklist: Pending/Success/Failed/Refunded)
 │ ├── Payment_Date**c (DateTime)
 │ └── Refund_Amount**c (Currency)
@@ -36,7 +36,7 @@ Account (Customer)
 ├── Case**c (Lookup)
 ├── Message**c (Long Text)
 ├── Sender**c (Customer/AI/Agent)
-└── Timestamp**c (DateTime)
+└── Timestamp\*\*c (DateTime)
 
 Knowledge\_\_kav (standard Knowledge object)
 ├── Article_Type: Refund_Policy, Checkin_Policy, General_FAQ
