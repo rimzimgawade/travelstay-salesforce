@@ -20,6 +20,7 @@ export default class BookingForm extends LightningElement {
     ];
 
     // Resolves the logged-in portal user's Account once, when the component loads.
+     // wiredAccountId gets ids
     @wire(getCurrentUserAccountId)
     wiredAccountId({ data, error }) {
         if (data) {
