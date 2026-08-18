@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Book Your Stay" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Hotel Name" value={hotelName} onchange={handleHotelChange}></lightning-input>
+            <lightning-input type="date" label="Check In" onchange={handleCheckInChange}></lightning-input>
+            <lightning-input type="date" label="Check Out" onchange={handleCheckOutChange}></lightning-input>
+            <lightning-combobox label="Room Type" options={roomOptions} onchange={handleRoomTypeChange}></lightning-combobox>
+            <lightning-input type="number" label="Total Amount (INR)" onchange={handleAmountChange}></lightning-input>
+            <lightning-button label="Book & Pay" variant="brand" onclick={handleBookAndPay} class="slds-m-top_medium"></lightning-button>
+        </div>
+    </lightning-card>
+</template>

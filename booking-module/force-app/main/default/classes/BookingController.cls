@@ -29,4 +29,18 @@ public with sharing class BookingController {
             ORDER BY CreatedDate DESC
         ];
     }
+
+    @AuraEnabled(cacheable=true)
+    public static Id getCurrentUserAccountId() {
+        User currentUser = [
+            SELECT ContactId, Contact.AccountId
+            FROM User
+            WHERE Id = :UserInfo.getUserId()
+            LIMIT 1
+        ];
+        if (currentUser.ContactId == null) {
+            throw new AuraHandledException('No Contact is associated with this user, so no Account can be resolved.');
+        }
+        return currentUser.Contact.AccountId;
+    }
 }
